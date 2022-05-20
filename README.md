@@ -29,7 +29,8 @@ This config is mostly inspired by: [Christian Chiarulli - Neovim from scratch](h
     - [LuaSnip]()
     - [friendly-snippets]()
     - [telescope.nvim]()
-    - [nvim-treesitter]()
+    - [nvim-treesitter]() 
+
 </details>
 
 ## Executable needed
