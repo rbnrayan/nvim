@@ -4,8 +4,11 @@
 
 This config is mostly inspired by: [Christian Chiarulli - Neovim from scratch](https://github.com/LunarVim/Neovim-from-scratch)
 
+Neovim version: 0.7
+
 ### Executable needed ###
   - **ripgrep**
+  - **unzip**
 
 ### Plugins ###
   (Plugin manager: [Packer](https://github.com/wbthomason/packer.nvim))
