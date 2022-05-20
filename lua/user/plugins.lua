@@ -47,7 +47,7 @@ return packer.startup(function(use)
 
   -- Colorscheme
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "owickstrom/vim-colors-paramount" -- paramount theme
+  use "andreypopp/vim-colors-plain"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -55,6 +55,12 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lua"
+
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
