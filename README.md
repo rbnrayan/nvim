@@ -4,7 +4,7 @@
 
 This config is mostly inspired by: [Christian Chiarulli - Neovim from scratch](https://github.com/LunarVim/Neovim-from-scratch)
 
-<details>
+<details markdown="1">
   <summary><h3>Plugins:</h3></summary> 
  
     Plugin manager: [Packer](https://github.com/wbthomason/packer.nvim) 
