@@ -6,6 +6,7 @@ This config is mostly inspired by: [Christian Chiarulli - Neovim from scratch](h
 
 <details>
   <summary><h3>Plugins:</h3></summary>
+
     (Plugin manager: [Packer](https://github.com/wbthomason/packer.nvim))
     - [popup.nvim]()
     - [plenary.nvim]()
@@ -28,6 +29,7 @@ This config is mostly inspired by: [Christian Chiarulli - Neovim from scratch](h
     - [friendly-snippets]()
     - [telescope.nvim]()
     - [nvim-treesitter]()
+
 </details>
 
 ## Executable needed
