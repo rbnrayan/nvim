@@ -49,8 +49,7 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "andreypopp/vim-colors-plain"
-  use "FrenzyExists/aquarium-vim"
+  use "bluz71/vim-moonfly-colors"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
