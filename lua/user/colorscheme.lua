@@ -1,7 +1,7 @@
 vim.cmd [[
 try
-  let zenbones_compat=1
-  colorscheme zenbones
+  let g:everforest_background='hard'
+  colorscheme everforest
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
