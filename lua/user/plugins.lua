@@ -53,10 +53,7 @@ return packer.startup(function(use)
   use "sainnhe/everforest"
   -- use "arzg/vim-colors-xcode"
   -- use "mcchrish/zenbones.nvim"
-  use({
-    "catppuccin/nvim",
-    as = "catppuccin"
-  })
+  use { "ellisonleao/gruvbox.nvim" }
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
