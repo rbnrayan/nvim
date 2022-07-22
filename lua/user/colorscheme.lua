@@ -1,6 +1,7 @@
 require("gruvbox").setup({
   -- contrast = "hard",
   italic = false,
+  bold = false,
 })
 
 vim.cmd [[

@@ -5,7 +5,7 @@ end
 
 configs.setup {
   ensure_installed = {
-    "c", "rust", "lua",
+    "c", "rust", "lua", "javascript"
   },
   sync_install = false,
   ignore_install = { "" }, -- List of parsers to ignore installing
