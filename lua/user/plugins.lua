@@ -49,10 +49,7 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  -- use "bluz71/vim-moonfly-colors"
-  use "sainnhe/everforest"
-  -- use "arzg/vim-colors-xcode"
-  -- use "mcchrish/zenbones.nvim"
+  use "bluz71/vim-moonfly-colors"
   use { "ellisonleao/gruvbox.nvim" }
 
   -- cmp plugins
