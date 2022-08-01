@@ -47,6 +47,7 @@ local kind_icons = {
 
 cmp.setup {
   window = {
+    completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   },
   snippet = {
@@ -67,35 +68,50 @@ cmp.setup {
     },
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
-    ["<CR>"] = cmp.mapping.confirm { select = true },
+    ["<CR>"] = cmp.mapping(function(fallback)
+        if cmp.visible() and cmp.confirm(lvim.builtin.cmp.confirm_opts) then
+          if jumpable() then
+            luasnip.jump(1)
+          end
+          return
+        end
+
+        if jumpable() then
+          if not luasnip.jump(1) then
+            fallback()
+          end
+        else
+          fallback()
+        end
+      end),
     ["<Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expandable() then
-        luasnip.expand()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      elseif check_backspace() then
-        fallback()
-      else
-        fallback()
-      end
-    end, {
-      "i",
-      "s",
-    }),
+        if cmp.visible() then
+          cmp.select_next_item()
+        elseif luasnip.expandable() then
+          luasnip.expand()
+        elseif jumpable() then
+          luasnip.jump(1)
+        elseif check_backspace() then
+          fallback()
+        else
+          fallback()
+        end
+      end, {
+        "i",
+        "s",
+      }),
     ["<S-Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, {
-      "i",
-      "s",
-    }),
+        if cmp.visible() then
+          cmp.select_prev_item()
+        elseif jumpable(-1) then
+          luasnip.jump(-1)
+        else
+          fallback()
+        end
+      end, {
+        "i",
+        "s",
+      }),
   },
   formatting = {
     fields = { "kind", "abbr", "menu" },
