@@ -3,8 +3,8 @@ if not cmp_status_ok then
   return
 end
 
-local snip_status_ok, luasnip = pcall(require, "luasnip")
-if not snip_status_ok then
+local luasnip_ok, luasnip = pcall(require, "luasnip")
+if not luasnip_ok then
   return
 end
 
@@ -17,11 +17,6 @@ end
 
 
 local function jumpable(dir)
-  local luasnip_ok, luasnip = pcall(require, "luasnip")
-  if not luasnip_ok then
-    return
-  end
-
   local win_get_cursor = vim.api.nvim_win_get_cursor
   local get_current_buf = vim.api.nvim_get_current_buf
 
