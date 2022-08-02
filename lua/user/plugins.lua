@@ -48,9 +48,13 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
 
   -- Colorschemes
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "bluz71/vim-moonfly-colors"
+  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  -- use "bluz71/vim-moonfly-colors"
   use { "ellisonleao/gruvbox.nvim" }
+
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -60,12 +64,9 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
-  use "akinsho/bufferline.nvim"
-  use "moll/vim-bbye"
 
-  -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  -- Tabline
+  use "akinsho/bufferline.nvim"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine

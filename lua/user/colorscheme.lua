@@ -1,10 +1,8 @@
 local colors = require("gruvbox.palette")
 require("gruvbox").setup({
   overrides = {
-    -- Operator = { fg = colors.gray },
     Special = { fg = colors.light2 },
   },
-  contrast = "hard",
   italic = false,
   bold = false,
 })
