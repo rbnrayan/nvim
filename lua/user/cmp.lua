@@ -47,8 +47,9 @@ local kind_icons = {
 
 cmp.setup {
   window = {
+    documentation = false,
+    -- documentation = cmp.config.window.bordered(),
     completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
   },
   snippet = {
     expand = function(args)
@@ -128,12 +129,7 @@ cmp.setup {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-  -- deprecated
-  -- documentation = {
-  --   border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  -- },
   experimental = {
-    ghost_text = false,
-    native_menu = false,
+    ghost_text = true,
   },
 }
